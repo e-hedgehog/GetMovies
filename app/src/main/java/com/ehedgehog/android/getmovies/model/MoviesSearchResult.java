@@ -12,7 +12,7 @@ public class MoviesSearchResult extends RealmObject implements Serializable {
     private String mTitle;
     @SerializedName("Year")
     private String mYear;
-    @SerializedName("imdbId")
+    @SerializedName("imdbID")
     private String mImdbId;
     @SerializedName("Type")
     private String mType;

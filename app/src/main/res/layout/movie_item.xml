@@ -30,36 +30,40 @@
             app:layout_constraintTop_toTopOf="parent"
             android:contentDescription="@string/movie_image_descr" />
 
-        <TextView
-            android:id="@+id/movie_item_title"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"
-            android:maxLines="2"
-            android:ellipsize="end"
+            android:paddingBottom="8dp"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/movie_item_image"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Title" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/movie_item_year"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/movie_item_image"
-            app:layout_constraintTop_toBottomOf="@+id/movie_item_title"
-            tools:text="Year" />
+            <TextView
+                android:id="@+id/movie_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/movie_item_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="16sp"
+                tools:text="Year" />
+
+        </LinearLayout>
+
 
     </android.support.constraint.ConstraintLayout>
 

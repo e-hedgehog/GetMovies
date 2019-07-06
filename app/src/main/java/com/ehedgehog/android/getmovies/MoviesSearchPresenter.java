@@ -2,7 +2,6 @@ package com.ehedgehog.android.getmovies;
 
 import android.content.Context;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.ehedgehog.android.getmovies.model.MoviesResponse;
 import com.ehedgehog.android.getmovies.model.MoviesSearchResult;
@@ -17,9 +16,9 @@ import io.reactivex.schedulers.Schedulers;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
-public class MoviesPresenter {
+public class MoviesSearchPresenter {
 
-    private static final String TAG = "MoviesPresenter";
+    private static final String TAG = "MoviesSearchPresenter";
 
     public interface Listener {
         void onMoviesFound(List<MoviesSearchResult> movies);
@@ -29,10 +28,10 @@ public class MoviesPresenter {
 
     private Paginator mPaginator;
     private Listener mListener;
-    private final MoviesService mReviewsService;
+    private final MoviesService mMoviesService;
 
-    public MoviesPresenter(MoviesService service) {
-        mReviewsService = service;
+    public MoviesSearchPresenter(MoviesService service) {
+        mMoviesService = service;
     }
 
     public void addListener(Listener listener) {
@@ -72,7 +71,7 @@ public class MoviesPresenter {
 
     public Observable<MoviesResponse> getAllResults(String s, String type, int page) {
         Log.i(TAG, "page = " + page);
-        return mReviewsService.searchMovies(s, type, page);
+        return mMoviesService.searchMovies(s, type, page);
     }
 
     public Paginator getPaginator() {

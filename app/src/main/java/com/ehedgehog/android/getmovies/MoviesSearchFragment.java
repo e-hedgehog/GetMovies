@@ -43,7 +43,7 @@ public class MoviesSearchFragment extends Fragment {
     private ProgressBar mProgressBar;
     private Spinner mTypeSpinner;
 
-    private MoviesPresenter mPresenter;
+    private MoviesSearchPresenter mPresenter;
     private Paginator mPaginator;
 
     private String mType;
@@ -159,10 +159,10 @@ public class MoviesSearchFragment extends Fragment {
     }
 
     private void setupMoviesPresenter() {
-        mPresenter = new MoviesPresenter(ApiFactory.buildMoviesService());
+        mPresenter = new MoviesSearchPresenter(ApiFactory.buildMoviesService());
         mPaginator = new Paginator();
         mPresenter.setPaginator(mPaginator);
-        mPresenter.addListener(new MoviesPresenter.Listener() {
+        mPresenter.addListener(new MoviesSearchPresenter.Listener() {
             @Override
             public void onMoviesFound(List<MoviesSearchResult> movies) {
                 updateUI(movies);

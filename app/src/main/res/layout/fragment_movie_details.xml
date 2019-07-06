@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title"
+            tools:src="@tools:sample/avatars"
+            android:contentDescription="@string/movie_image_descr" />
+
+        <TextView
+            android:id="@+id/movie_rating_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/movie_rating_label"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_image" />
+
+        <TextView
+            android:id="@+id/movie_rating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movie_rating_label"
+            app:layout_constraintTop_toTopOf="@+id/movie_rating_label"
+            tools:text="9.5" />
+
+        <TextView
+            android:id="@+id/movie_released_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:text="@string/movie_released_label"
+            app:layout_constraintStart_toStartOf="@+id/movie_rating_label"
+            app:layout_constraintTop_toBottomOf="@+id/movie_rating" />
+
+        <TextView
+            android:id="@+id/movie_released"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movie_released_label"
+            app:layout_constraintTop_toTopOf="@+id/movie_released_label"
+            tools:text="@tools:sample/date/ddmmyy" />
+
+        <TextView
+            android:id="@+id/movie_country_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:text="@string/movie_country_label"
+            app:layout_constraintStart_toStartOf="@+id/movie_released_label"
+            app:layout_constraintTop_toBottomOf="@+id/movie_released" />
+
+        <TextView
+            android:id="@+id/movie_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/movie_country_label"
+            app:layout_constraintTop_toTopOf="@+id/movie_country_label"
+            tools:text="UK" />
+
+        <TextView
+            android:id="@+id/movie_language_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@android:color/black"
+            android:text="@string/movie_language_label"
+            app:layout_constraintBottom_toBottomOf="@+id/movie_country"
+            app:layout_constraintStart_toEndOf="@+id/movie_country"
+            app:layout_constraintTop_toTopOf="@+id/movie_country" />
+
+        <TextView
+            android:id="@+id/movie_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movie_language_label"
+            app:layout_constraintTop_toTopOf="@+id/movie_language_label"
+            tools:text="English" />
+
+        <TextView
+            android:id="@+id/movie_awards_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:text="@string/movie_awards_label"
+            app:layout_constraintStart_toStartOf="@+id/movie_country_label"
+            app:layout_constraintTop_toBottomOf="@+id/movie_language" />
+
+        <TextView
+            android:id="@+id/movie_awards"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movie_awards_label"
+            app:layout_constraintTop_toTopOf="@+id/movie_awards_label"
+            tools:text="5 wins." />
+
+        <TextView
+            android:id="@+id/movie_genre_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:text="@string/movie_genre_label"
+            app:layout_constraintStart_toStartOf="@+id/movie_awards_label"
+            app:layout_constraintTop_toBottomOf="@+id/movie_awards" />
+
+        <TextView
+            android:id="@+id/movie_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movie_genre_label"
+            app:layout_constraintTop_toTopOf="@+id/movie_genre_label"
+            tools:text="Adventure" />
+
+        <TextView
+            android:id="@+id/movie_writer_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:text="@string/movie_writer_label"
+            app:layout_constraintStart_toStartOf="@+id/movie_genre_label"
+            app:layout_constraintTop_toBottomOf="@+id/movie_genre" />
+
+        <TextView
+            android:id="@+id/movie_writer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movie_writer_label"
+            app:layout_constraintTop_toTopOf="@+id/movie_writer_label"
+            tools:text="David Benioff, D. B. Weiss" />
+
+        <TextView
+            android:id="@+id/movie_actors_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:text="@string/movie_actors_label"
+            app:layout_constraintStart_toStartOf="@+id/movie_writer_label"
+            app:layout_constraintTop_toBottomOf="@+id/movie_writer" />
+
+        <TextView
+            android:id="@+id/movie_actors"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/movie_actors_label"
+            app:layout_constraintTop_toTopOf="@+id/movie_actors_label"
+            tools:text="Maisie Williams, Sophie Turner" />
+
+        <TextView
+            android:id="@+id/movie_plot"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_actors"
+            tools:text="plot" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

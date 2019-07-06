@@ -3,4 +3,12 @@
     <string name="movie_image_descr">Movie Poster</string>
     <string name="empty_view">Nothing to show</string>
     <string name="menu_search_title">Search</string>
+    <string name="movie_rating_label">Rating: </string>
+    <string name="movie_released_label">Released:</string>
+    <string name="movie_country_label">Country:</string>
+    <string name="movie_language_label">Language:</string>
+    <string name="movie_awards_label">Awards:</string>
+    <string name="movie_genre_label">Genre:</string>
+    <string name="movie_writer_label">Writer:</string>
+    <string name="movie_actors_label">Actors:</string>
 </resources>

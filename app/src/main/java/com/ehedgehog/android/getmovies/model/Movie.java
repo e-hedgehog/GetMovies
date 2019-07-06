@@ -38,7 +38,7 @@ public class Movie extends RealmObject implements Serializable {
     private String mImdbRating;
     @SerializedName("imdbVotes")
     private String mImdbVotes;
-    @SerializedName("imdbId")
+    @SerializedName("imdbID")
     private String mImdbId;
     @SerializedName("Type")
     private String mType;

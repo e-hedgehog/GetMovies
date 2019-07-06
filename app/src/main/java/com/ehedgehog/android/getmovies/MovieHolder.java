@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,8 +45,8 @@ public class MovieHolder extends RecyclerView.ViewHolder implements View.OnClick
 
     @Override
     public void onClick(View v) {
-//        Context context = v.getContext();
-//        Intent i = ReviewDetailsActivity.newIntent(context, mMovie);
-//        context.startActivity(i);
+        Context context = v.getContext();
+        Intent i = MovieDetailsActivity.newIntent(context, mMovie.getImdbId());
+        context.startActivity(i);
     }
 }
